@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="ISO-8859-1" standalone="yes"?>
+<pdv_liste>
+  <pdv id="1210003" latitude="4624400" longitude="609500" cp="01210" pop="R">
+    <adresse>Route de Meyrin</adresse>
+    <ville>FERNEY-VOLTAIRE</ville>
+    <horaires automate-24-24="1">
+      <jour id="1" nom="Lundi" ferme="">
+        <horaire ouverture="08.30" fermeture="20.00"/>
+      </jour>
+      <jour id="2" nom="Mardi" ferme="">
+        <horaire ouverture="08.30" fermeture="20.00"/>
+      </jour>
+      <jour id="3" nom="Mercredi" ferme="">
+        <horaire ouverture="08.30" fermeture="20.00"/>
+      </jour>
+      <jour id="4" nom="Jeudi" ferme="">
+        <horaire ouverture="08.30" fermeture="20.00"/>
+      </jour>
+      <jour id="5" nom="Vendredi" ferme="">
+        <horaire ouverture="08.30" fermeture="20.00"/>
+      </jour>
+      <jour id="6" nom="Samedi" ferme="">
+        <horaire ouverture="08.30" fermeture="20.00"/>
+      </jour>
+      <jour id="7" nom="Dimanche" ferme="1"/>
+    </horaires>
+    <services>
+      <service>Station de gonflage</service>
+      <service>Vente de gaz domestique (Butane, Propane)</service>
+      <service>Piste poids lourds</service>
+      <service>Automate CB</service>
+      <service>Automate CB 24/24</service>
+    </services>
+    <prix nom="Gazole" id="1" maj="2019-01-21 09:12:52" valeur="1.390"/>
+    <prix nom="SP95" id="2" maj="2019-01-21 09:12:53" valeur="1.420"/>
+    <prix nom="E85" id="3" maj="2019-01-03 09:43:11" valeur="0.608"/>
+    <prix nom="E10" id="5" maj="2019-01-21 09:12:53" valeur="1.380"/>
+  </pdv>
+  <pdv id="33260005" latitude="4461039" longitude="-114600" cp="33260" pop="R">
+    <adresse> Boulevard des Miquelots</adresse>
+    <ville>LA TESTE-DE-BUCH</ville>
+    <services>
+      <service>Vente de gaz domestique (Butane, Propane)</service>
+      <service>Automate CB</service>
+      <service>Vente de fioul domestique</service>
+    </services>
+    <prix nom="Gazole" id="1" maj="2019-02-01 11:29:00" valeur="1.475"/>
+    <prix nom="SP95" id="2" maj="2019-01-31 11:28:01" valeur="1.398"/>
+    <prix nom="E85" id="3" maj="2018-11-09 08:47:11" valeur="0.647"/>
+    <prix nom="E10" id="5" maj="2019-01-31 11:28:01" valeur="1.370"/>
+  </pdv>
+  <pdv id="33260009" latitude="4461040" longitude="-114601" cp="33260" pop="R">
+  </pdv>
+  <pdv id="28500007" latitude="4874800" longitude="127100" cp="28500" pop="R">
+    <adresse>RN 12 (COTE SUD)</adresse>
+    <ville>Vert-en-Drouais</ville>
+    <horaires automate-24-24="">
+      <jour id="1" nom="Lundi" ferme=""/>
+      <jour id="2" nom="Mardi" ferme=""/>
+      <jour id="3" nom="Mercredi" ferme=""/>
+      <jour id="4" nom="Jeudi" ferme=""/>
+      <jour id="5" nom="Vendredi" ferme=""/>
+      <jour id="6" nom="Samedi" ferme=""/>
+      <jour id="7" nom="Dimanche" ferme=""/>
+    </horaires>
+    <services>
+      <service>Restauration à emporter</service>
+      <service>Restauration sur place</service>
+      <service>Toilettes publiques</service>
+      <service>Douches</service>
+      <service>Boutique alimentaire</service>
+      <service>Station de gonflage</service>
+      <service>Espace bébé</service>
+      <service>Piste poids lourds</service>
+      <service>Automate CB</service>
+    </services>
+    <prix nom="Gazole" id="1" maj="2019-02-01 00:01:00" valeur="1.486"/>
+    <prix nom="GPLc" id="4" maj="2019-02-01 00:01:00" valeur="0.909"/>
+    <prix nom="E10" id="5" maj="2019-02-01 00:01:00" valeur="1.484"/>
+    <prix nom="SP98" id="6" maj="2019-02-01 00:01:00" valeur="1.594"/>
+  </pdv>
+</pdv_liste>

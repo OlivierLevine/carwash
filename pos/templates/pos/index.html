@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Car Wash® by Olivier Lévine</title>
+    <meta name="viewport" content="initial-scale=1.0">
+    <meta charset="utf-8">
+    <style>
+      #map {
+        height: 100%;
+      }
+      html, body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="map"></div>
+    <script>
+      var map;
+      var infowindow
+      function initMap() {
+        map = new google.maps.Map(document.getElementById('map'), {
+          center: {lat: 48.8566101, lng: 2.3514992},
+          zoom: 11
+        });
+        var markerInfo = { map: map, position: {} };
+        infowindow = new google.maps.InfoWindow();
+        {% if latest_pos_list %}
+          {% for pos in latest_pos_list %}
+            markerInfo.position.lat = {{ pos.latitude }};
+            markerInfo.position.lng = {{ pos.longitude }};
+            markerInfo.title = "PDV {{pos.id}}";
+            var contentString = '<h1>Point de Vente {{pos.id}}</h1>' +
+              '<div>Adresse: <b>{{pos.address}} {{pos.zip}} {{pos.city}}</b></div>';
+
+            contentString = contentString + '<br><h2>SERVICES</h2><ul>';
+            {% for service in pos.services %}
+              contentString = contentString + '<li>{{service.service.name}}</li>';
+            {% endfor %}
+            contentString = contentString + '</ul>';
+
+            contentString = contentString + '<br><h2>CARBURANTS</h2><ul>';
+            {% for fuel in pos.fuels %}
+              contentString = contentString + '<li>{{fuel.fuel.name}} : {{fuel.value}}€</li>';
+            {% endfor %}
+            contentString = contentString + '</ul>';
+
+            var marker = new google.maps.Marker(markerInfo);
+            bindInfoWindow(marker, contentString);
+            {% endfor %}
+        {% endif %}
+      }
+      function bindInfoWindow(marker, info) {
+        google.maps.event.addListener(marker, 'click', function() {
+            infowindow.setContent(info);
+            infowindow.open(map, marker);
+        });
+      }
+    </script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?&callback=initMap"></script>
+  </body>
+</html>
