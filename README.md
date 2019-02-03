@@ -64,12 +64,14 @@ python manage.py test
 Store the current xml file in directory fixtures
 
 ### Run the import:
-```python import_file.py --filename fixtures/<name_of_xml_file>
+```sh
+python import_file.py --filename fixtures/<name_of_xml_file>
 ```
 
 ### Look at the result:
 1. Import the file
-```python import_file.py --filename fixtures/PrixCarburants_instantane.xml
+```sh
+python import_file.py --filename fixtures/PrixCarburants_instantane.xml
 ```
 2. Start the server
 ```sh
